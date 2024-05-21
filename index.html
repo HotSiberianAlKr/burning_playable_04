@@ -6364,7 +6364,11 @@ if (reversed == null) { reversed = false; }
 				}
 			}
 			function checkClicks() {
-				if (button_upC_v.used && button_add_v.used && button_upW_v.used) {
+				if (button_upC_v.used && button_add_v.used) {
+					root.cta.visible = true
+				} else if (button_upC_v.used && button_upW_v.used) {
+					root.cta.visible = true
+				} else if (button_add_v.used && button_upW_v.used) {
 					root.cta.visible = true
 				}
 			}
@@ -6718,8 +6722,8 @@ if (reversed == null) { reversed = false; }
 		}
 		function moveBarrelRow() {
 			barrelArray[0].gotoAndStop(49)
-			lastBarrelAppeared--
 			barrelArray[lastBarrelAppeared].gotoAndStop(0)
+			lastBarrelAppeared--
 		}
 		function upgradeWater() {
 			if (!waterUpgraded) {
@@ -6980,8 +6984,8 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"index_atlas_P_1.png?1716292229824", id:"index_atlas_P_1"},
-		{src:"index_atlas_NP_1.jpg?1716292229825", id:"index_atlas_NP_1"}
+		{src:"index_atlas_P_1.png?1716296677626", id:"index_atlas_P_1"},
+		{src:"index_atlas_NP_1.jpg?1716296677627", id:"index_atlas_NP_1"}
 	],
 	preloads: []
 };
